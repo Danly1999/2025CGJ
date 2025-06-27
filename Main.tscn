@@ -1,0 +1,122 @@
+[gd_scene load_steps=13 format=3 uid="uid://ha3bn71hysn5"]
+
+[ext_resource type="Script" uid="uid://jhlah1a10ili" path="res://Player.cs" id="1_glv2v"]
+[ext_resource type="Script" uid="uid://dmnsjo5qoueu4" path="res://PlayerArea2d.cs" id="2_uu6xs"]
+[ext_resource type="Shader" uid="uid://b34qrmo5sqnhj" path="res://NormalEnemy.gdshader" id="3_cm0pq"]
+[ext_resource type="Texture2D" uid="uid://m3gtjyrl2wau" path="res://tauri.svg" id="4_fos0i"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_rxg2q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_glv2v"]
+size = Vector2(1, 1)
+
+[sub_resource type="Gradient" id="Gradient_glv2v"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_uu6xs"]
+gradient = SubResource("Gradient_glv2v")
+width = 60
+height = 60
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_uu6xs"]
+diffuse_texture = SubResource("GradientTexture2D_uu6xs")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r0du0"]
+size = Vector2(56, 56)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cm0pq"]
+size = Vector2(40, 16)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3dxm6"]
+shader = ExtResource("3_cm0pq")
+
+[node name="Node" type="Node"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Camera2D" type="Camera2D" parent="Node2D"]
+anchor_mode = 0
+
+[node name="Sprite2D2" type="Sprite2D" parent="Node2D"]
+position = Vector2(462, 481)
+scale = Vector2(600, 196.34)
+texture = SubResource("CanvasTexture_rxg2q")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="Node2D/Sprite2D2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Sprite2D2/RigidBody2D"]
+shape = SubResource("RectangleShape2D_glv2v")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Node2D"]
+position = Vector2(274, -63)
+script = ExtResource("1_glv2v")
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/CharacterBody2D"]
+z_index = 1
+position = Vector2(-1.99999, 0)
+texture = SubResource("CanvasTexture_uu6xs")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="Node2D/CharacterBody2D/Sprite2D"]
+visible = false
+position = Vector2(3.92157, 0)
+scale = Vector2(1.96078, 2.0202)
+amount = 3
+preprocess = 1.0
+local_coords = true
+spread = 30.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 150.0
+initial_velocity_max = 200.0
+scale_amount_min = 20.0
+scale_amount_max = 20.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/CharacterBody2D"]
+z_index = 1
+position = Vector2(-2, 0)
+shape = SubResource("RectangleShape2D_r0du0")
+
+[node name="Area2D" type="Area2D" parent="Node2D/CharacterBody2D"]
+collision_mask = 2
+script = ExtResource("2_uu6xs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/CharacterBody2D/Area2D"]
+position = Vector2(-2, 23)
+shape = SubResource("RectangleShape2D_cm0pq")
+debug_color = Color(0.93876, 1.24177e-05, 0.622308, 0.42)
+
+[node name="EnemyBody2D" type="CharacterBody2D" parent="Node2D"]
+position = Vector2(824, 344)
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/EnemyBody2D"]
+material = SubResource("ShaderMaterial_3dxm6")
+position = Vector2(-4, -4)
+scale = Vector2(0.271845, 0.242424)
+texture = ExtResource("4_fos0i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/EnemyBody2D"]
+position = Vector2(-4, -4)
+shape = SubResource("RectangleShape2D_r0du0")
+
+[node name="Area2D" type="Area2D" parent="Node2D/EnemyBody2D"]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/EnemyBody2D/Area2D"]
+position = Vector2(-4, -32)
+shape = SubResource("RectangleShape2D_cm0pq")
+debug_color = Color(0.93876, 1.24177e-05, 0.622308, 0.42)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Node2D" groups=["navigation_polygon_source_geometry_group"]]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Node2D/StaticBody2D"]
+polygon = PackedVector2Array(0, 3, 174, 77, 192, 128, 192, 384, 384, 384, 384, 320, 512, 320, 512, 384, 768, 384, 1032, 384, 1088, 448, 1152, 384, 1152, 648, 0, 648)
