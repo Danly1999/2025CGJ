@@ -19,7 +19,7 @@ dialogic_timeline = "冷屋enter"
 
 [node name="Area2D" type="Area2D" parent="."]
 z_index = 1
-position = Vector2(96, 864)
+position = Vector2(1696, 864)
 script = ExtResource("1_sqcmn")
 dia_name = "冷屋over"
 type = 3
@@ -485,6 +485,7 @@ texture = ExtResource("3_sqcmn")
 shape = SubResource("RectangleShape2D_epgf1")
 
 [node name="Area2D42" type="Area2D" parent="lengs"]
+z_index = 1
 position = Vector2(384, 576)
 script = ExtResource("1_hhf1f")
 
@@ -871,7 +872,7 @@ texture = ExtResource("3_sqcmn")
 shape = SubResource("RectangleShape2D_epgf1")
 
 [node name="Area2D77" type="Area2D" parent="lengs"]
-position = Vector2(1688, 864)
+position = Vector2(1856, 864)
 script = ExtResource("1_hhf1f")
 
 [node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D77"]
@@ -882,7 +883,8 @@ texture = ExtResource("3_sqcmn")
 shape = SubResource("RectangleShape2D_epgf1")
 
 [node name="Area2D78" type="Area2D" parent="lengs"]
-position = Vector2(1864, 864)
+z_index = 2
+position = Vector2(80, 864)
 script = ExtResource("1_hhf1f")
 
 [node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D78"]
@@ -1004,6 +1006,7 @@ texture = ExtResource("3_sqcmn")
 shape = SubResource("RectangleShape2D_epgf1")
 
 [node name="Area2D90" type="Area2D" parent="lengs"]
+z_index = 1
 position = Vector2(1680, 1008)
 script = ExtResource("1_hhf1f")
 

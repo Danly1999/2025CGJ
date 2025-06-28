@@ -25,11 +25,13 @@ height = 240.0
 [node name="雪碧" type="Node2D"]
 script = ExtResource("1_ssibj")
 dialogic_timeline = "雪碧"
+next_scene_path = "uid://fsbhb5p44doy"
 
 [node name="leibi" type="Area2D" parent="."]
 position = Vector2(568, 480)
 script = ExtResource("4_0jbuj")
 dia_name = "xueover"
+next_scene_path = "res://Scene/冷屋.tscn"
 type = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="leibi"]

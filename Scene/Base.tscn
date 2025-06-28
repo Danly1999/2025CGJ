@@ -1,9 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://dvxflogrejndx"]
+[gd_scene load_steps=6 format=3 uid="uid://dvxflogrejndx"]
 
 [ext_resource type="Texture2D" uid="uid://bc7onk71m3wuy" path="res://Texture/hachi.png" id="1_jiqry"]
 [ext_resource type="Texture2D" uid="uid://bud048y3id12w" path="res://Texture/hachi2.png" id="2_jtrc1"]
 [ext_resource type="Texture2D" uid="uid://xekvgydagppq" path="res://Texture/hachi3.png" id="3_tt5dw"]
-[ext_resource type="PackedScene" uid="uid://c0xpq3i0aj1kq" path="res://Scene/冷屋.tscn" id="5_jiqry"]
 [ext_resource type="Script" uid="uid://b31t6t6ifjlfy" path="res://Scripts/dia.gd" id="8_tt5dw"]
 
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_jiqry"]
@@ -49,5 +48,3 @@ anchor_mode = 0
 script = ExtResource("8_tt5dw")
 next_scene_path = "uid://fsbhb5p44doy"
 change_scene = true
-
-[node name="冷屋" parent="Node2D" instance=ExtResource("5_jiqry")]
