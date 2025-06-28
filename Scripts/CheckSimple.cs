@@ -1,23 +1,10 @@
 using Godot;
 using System;
 
-public enum CheckSpriteType
-{
-	xia,
-	car,
-	bi,
-}
-
-public partial class CheckSprite : Area2D
+public partial class CheckSimple : Area2D
 {
 	private Material _originalMaterial;
 	private Material _materialCopy;
-	[Export]
-	public string dia_name = "RiseLong";
-	[Export]
-	public string next_scene_path = "res://Scene/小龙虾.tscn";
-	[Export]
-	public CheckSpriteType type = CheckSpriteType.xia;
 	public override void _Ready()
 	{
 		// 连接Area2D的鼠标事件信号
@@ -80,42 +67,8 @@ public partial class CheckSprite : Area2D
 				{
 					GetChild<Sprite2D>(0).Scale = new Vector2(1.0f, 1.0f);
 				}
-				switch (type)
-				{
-					case CheckSpriteType.xia:
-						GetNode<Dmove>("../小龙虾s").over = true;
-						break;
-					case CheckSpriteType.car:
-						GetChild<Sprite2D>(0).Texture = GD.Load<Texture2D>("res://Texture/car/nucar.tres");
-						break;
-					case CheckSpriteType.bi:
-						GetNode<Real>("../real").over = true;
-						break;
-				}
-					GameManager.Instance._dialogicBridge.Call("start_timeline", dia_name);
-					GameManager.Instance._dialogicBridge.Call("connect_signal", this, nameof(DelayedFree));
+
 			}
 		}
-	}
-	public async void DelayedFree()
-	{
-		await ToSignal(GetTree().CreateTimer(2f), "timeout");
-		
-		var scene = GD.Load<PackedScene>(next_scene_path);
-		if (scene == null)
-		{
-			GD.Print("场景加载失败: ", next_scene_path);
-			return;
-		}
-		
-		Node2D parent = GetNode<Node2D>("../..");
-		if (parent == null)
-		{
-			GD.Print("父节点无效");
-			return;
-		}
-		
-		parent.AddChild(scene.Instantiate());
-		GetParent<Node2D>().QueueFree();
 	}
 }

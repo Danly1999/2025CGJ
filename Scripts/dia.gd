@@ -2,7 +2,7 @@ extends Node2D
 
 @export var dialogic_timeline: String = "timeline"
 @export_file("*.tscn") var next_scene_path: String = "res://Scene/小龙虾.tscn"
-@export var change_scene: bool = true
+@export var change_scene: bool = false
 func _ready() -> void:
 	if not Dialogic.start(dialogic_timeline):
 		push_error("Dialogic 时间线加载失败: ", dialogic_timeline)

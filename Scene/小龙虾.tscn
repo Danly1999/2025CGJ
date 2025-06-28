@@ -14,11 +14,11 @@ size = Vector2(192, 224)
 script = ExtResource("1_62vs7")
 dialogic_timeline = "小龙虾"
 next_scene_path = "uid://fsbhb5p44doy"
-change_scene = false
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(736, 432)
 script = ExtResource("1_mnay5")
+next_scene_path = "res://Scene/car.tscn"
 
 [node name="bardan" type="Sprite2D" parent="Area2D"]
 material = ExtResource("3_wxche")
@@ -111,6 +111,92 @@ scale = Vector2(1.16793, 1.16793)
 texture = ExtResource("4_wxche")
 
 [node name="Sprite2D18" type="Sprite2D" parent="小龙虾s"]
+position = Vector2(1577.06, 705.056)
+rotation = 0.112892
+scale = Vector2(1.16793, 1.16793)
+texture = ExtResource("4_wxche")
+
+[node name="Sprite2D19" type="Sprite2D" parent="小龙虾s"]
+position = Vector2(260, 308)
+texture = ExtResource("4_wxche")
+
+[node name="Sprite2D20" type="Sprite2D" parent="小龙虾s"]
+position = Vector2(944, 320)
+texture = ExtResource("4_wxche")
+
+[node name="Sprite2D21" type="Sprite2D" parent="小龙虾s"]
+position = Vector2(536, 520)
+texture = ExtResource("4_wxche")
+
+[node name="Sprite2D22" type="Sprite2D" parent="小龙虾s"]
+position = Vector2(1220, 532)
+texture = ExtResource("4_wxche")
+
+[node name="Sprite2D23" type="Sprite2D" parent="小龙虾s"]
+position = Vector2(392, 648)
+rotation = -0.191452
+texture = ExtResource("4_wxche")
+
+[node name="Sprite2D24" type="Sprite2D" parent="小龙虾s"]
+position = Vector2(1076, 660)
+rotation = -0.191452
+texture = ExtResource("4_wxche")
+
+[node name="Sprite2D25" type="Sprite2D" parent="小龙虾s"]
+position = Vector2(771.055, 587.055)
+rotation = 0.388481
+scale = Vector2(1.33356, 1.33356)
+texture = ExtResource("4_wxche")
+
+[node name="Sprite2D26" type="Sprite2D" parent="小龙虾s"]
+position = Vector2(1455.06, 599.055)
+rotation = 0.388481
+scale = Vector2(1.33356, 1.33356)
+texture = ExtResource("4_wxche")
+
+[node name="Sprite2D27" type="Sprite2D" parent="小龙虾s"]
+position = Vector2(382, 414)
+rotation = -0.275588
+scale = Vector2(0.875797, 0.875797)
+texture = ExtResource("4_wxche")
+
+[node name="Sprite2D28" type="Sprite2D" parent="小龙虾s"]
+position = Vector2(1066, 426)
+rotation = -0.275588
+scale = Vector2(0.875797, 0.875797)
+texture = ExtResource("4_wxche")
+
+[node name="Sprite2D29" type="Sprite2D" parent="小龙虾s"]
+position = Vector2(658, 626)
+rotation = -0.275588
+scale = Vector2(0.875797, 0.875797)
+texture = ExtResource("4_wxche")
+
+[node name="Sprite2D30" type="Sprite2D" parent="小龙虾s"]
+position = Vector2(1342, 638)
+rotation = -0.275588
+scale = Vector2(0.875797, 0.875797)
+texture = ExtResource("4_wxche")
+
+[node name="Sprite2D31" type="Sprite2D" parent="小龙虾s"]
+position = Vector2(514, 754)
+rotation = -0.46704
+scale = Vector2(0.875797, 0.875797)
+texture = ExtResource("4_wxche")
+
+[node name="Sprite2D32" type="Sprite2D" parent="小龙虾s"]
+position = Vector2(1198, 766)
+rotation = -0.46704
+scale = Vector2(0.875797, 0.875797)
+texture = ExtResource("4_wxche")
+
+[node name="Sprite2D33" type="Sprite2D" parent="小龙虾s"]
+position = Vector2(893.056, 693.056)
+rotation = 0.112892
+scale = Vector2(1.16793, 1.16793)
+texture = ExtResource("4_wxche")
+
+[node name="Sprite2D34" type="Sprite2D" parent="小龙虾s"]
 position = Vector2(1577.06, 705.056)
 rotation = 0.112892
 scale = Vector2(1.16793, 1.16793)

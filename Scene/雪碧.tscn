@@ -1,0 +1,422 @@
+[gd_scene load_steps=14 format=3 uid="uid://brnbtb2r6t56d"]
+
+[ext_resource type="Script" uid="uid://bmwlgi4o27y3w" path="res://Scripts/CheckSimple.cs" id="1_0iipq"]
+[ext_resource type="Script" uid="uid://b31t6t6ifjlfy" path="res://Scripts/dia.gd" id="1_ssibj"]
+[ext_resource type="Material" uid="uid://p64bbolsj4l8" path="res://Materials/base.material" id="2_k8ksi"]
+[ext_resource type="Texture2D" uid="uid://17wffhtj7t3k" path="res://Texture/xuebi/xuebi01.png" id="3_0jbuj"]
+[ext_resource type="Texture2D" uid="uid://dffw5aig3fnw3" path="res://Texture/xuebi/leibi.png" id="3_dpuf3"]
+[ext_resource type="Script" uid="uid://y0ieq5krk2vv" path="res://Scripts/CheckSprite.cs" id="4_0jbuj"]
+[ext_resource type="Texture2D" uid="uid://df6jyqauq8l6m" path="res://Texture/xuebi/xuebi02.png" id="4_k8ksi"]
+[ext_resource type="Texture2D" uid="uid://d4gobsfdpapp7" path="res://Texture/xuebi/xuebi03.png" id="5_0jbuj"]
+[ext_resource type="Script" uid="uid://cbrt0f8dwf7o0" path="res://Scripts/Real.cs" id="5_rb3df"]
+[ext_resource type="PackedScene" uid="uid://bxcmrj4kh1nt0" path="res://Scene/cpu_particles_2d.tscn" id="7_0j3tj"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_d78qb"]
+radius = 40.0
+height = 256.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k8ksi"]
+size = Vector2(128, 192)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dpuf3"]
+radius = 48.0
+height = 240.0
+
+[node name="雪碧" type="Node2D"]
+script = ExtResource("1_ssibj")
+dialogic_timeline = "雪碧"
+
+[node name="leibi" type="Area2D" parent="."]
+position = Vector2(568, 480)
+script = ExtResource("4_0jbuj")
+dia_name = "xueover"
+type = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="leibi"]
+material = ExtResource("2_k8ksi")
+texture = ExtResource("3_dpuf3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="leibi"]
+shape = SubResource("CapsuleShape2D_d78qb")
+
+[node name="real" type="Node2D" parent="."]
+script = ExtResource("5_rb3df")
+
+[node name="Area2D" type="Area2D" parent="real"]
+position = Vector2(648, 376)
+script = ExtResource("1_0iipq")
+
+[node name="Sprite2D" type="Sprite2D" parent="real/Area2D"]
+material = ExtResource("2_k8ksi")
+texture = ExtResource("3_0jbuj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="real/Area2D"]
+shape = SubResource("CapsuleShape2D_d78qb")
+
+[node name="CPUParticles2D" parent="real/Area2D" instance=ExtResource("7_0j3tj")]
+position = Vector2(-8, -112)
+
+[node name="Area2D25" type="Area2D" parent="real"]
+position = Vector2(824, 272)
+rotation = -0.328234
+script = ExtResource("1_0iipq")
+
+[node name="Sprite2D" type="Sprite2D" parent="real/Area2D25"]
+material = ExtResource("2_k8ksi")
+texture = ExtResource("3_0jbuj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="real/Area2D25"]
+shape = SubResource("CapsuleShape2D_d78qb")
+
+[node name="CPUParticles2D" parent="real/Area2D25" instance=ExtResource("7_0j3tj")]
+
+[node name="Area2D2" type="Area2D" parent="real"]
+position = Vector2(904, 408)
+rotation = -0.46197
+script = ExtResource("1_0iipq")
+
+[node name="Sprite2D" type="Sprite2D" parent="real/Area2D2"]
+material = ExtResource("2_k8ksi")
+texture = ExtResource("4_k8ksi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="real/Area2D2"]
+shape = SubResource("RectangleShape2D_k8ksi")
+
+[node name="CPUParticles2D" parent="real/Area2D2" instance=ExtResource("7_0j3tj")]
+
+[node name="Area2D26" type="Area2D" parent="real"]
+position = Vector2(752, 328)
+rotation = 0.131735
+script = ExtResource("1_0iipq")
+
+[node name="Sprite2D" type="Sprite2D" parent="real/Area2D26"]
+material = ExtResource("2_k8ksi")
+texture = ExtResource("4_k8ksi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="real/Area2D26"]
+shape = SubResource("RectangleShape2D_k8ksi")
+
+[node name="CPUParticles2D" parent="real/Area2D26" instance=ExtResource("7_0j3tj")]
+
+[node name="Area2D3" type="Area2D" parent="real"]
+position = Vector2(1184, 408)
+rotation = -0.177903
+script = ExtResource("1_0iipq")
+
+[node name="Sprite2D" type="Sprite2D" parent="real/Area2D3"]
+material = ExtResource("2_k8ksi")
+texture = ExtResource("5_0jbuj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="real/Area2D3"]
+shape = SubResource("CapsuleShape2D_dpuf3")
+
+[node name="CPUParticles2D" parent="real/Area2D3" instance=ExtResource("7_0j3tj")]
+
+[node name="Area2D4" type="Area2D" parent="real"]
+position = Vector2(1056, 496)
+rotation = -0.138152
+script = ExtResource("1_0iipq")
+
+[node name="Sprite2D" type="Sprite2D" parent="real/Area2D4"]
+material = ExtResource("2_k8ksi")
+texture = ExtResource("3_0jbuj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="real/Area2D4"]
+shape = SubResource("CapsuleShape2D_d78qb")
+
+[node name="CPUParticles2D" parent="real/Area2D4" instance=ExtResource("7_0j3tj")]
+
+[node name="Area2D5" type="Area2D" parent="real"]
+position = Vector2(1312, 528)
+rotation = 0.323818
+script = ExtResource("1_0iipq")
+
+[node name="Sprite2D" type="Sprite2D" parent="real/Area2D5"]
+material = ExtResource("2_k8ksi")
+texture = ExtResource("4_k8ksi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="real/Area2D5"]
+shape = SubResource("RectangleShape2D_k8ksi")
+
+[node name="CPUParticles2D" parent="real/Area2D5" instance=ExtResource("7_0j3tj")]
+
+[node name="Area2D6" type="Area2D" parent="real"]
+position = Vector2(1424, 488)
+rotation = -0.316054
+script = ExtResource("1_0iipq")
+
+[node name="Sprite2D" type="Sprite2D" parent="real/Area2D6"]
+material = ExtResource("2_k8ksi")
+texture = ExtResource("5_0jbuj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="real/Area2D6"]
+shape = SubResource("CapsuleShape2D_dpuf3")
+
+[node name="CPUParticles2D" parent="real/Area2D6" instance=ExtResource("7_0j3tj")]
+
+[node name="Area2D7" type="Area2D" parent="real"]
+position = Vector2(264, 128)
+rotation = -0.639873
+script = ExtResource("1_0iipq")
+
+[node name="Sprite2D" type="Sprite2D" parent="real/Area2D7"]
+material = ExtResource("2_k8ksi")
+texture = ExtResource("3_0jbuj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="real/Area2D7"]
+shape = SubResource("CapsuleShape2D_d78qb")
+
+[node name="CPUParticles2D" parent="real/Area2D7" instance=ExtResource("7_0j3tj")]
+
+[node name="Area2D8" type="Area2D" parent="real"]
+position = Vector2(672, 144)
+rotation = -0.177903
+script = ExtResource("1_0iipq")
+
+[node name="Sprite2D" type="Sprite2D" parent="real/Area2D8"]
+material = ExtResource("2_k8ksi")
+texture = ExtResource("4_k8ksi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="real/Area2D8"]
+shape = SubResource("RectangleShape2D_k8ksi")
+
+[node name="CPUParticles2D" parent="real/Area2D8" instance=ExtResource("7_0j3tj")]
+
+[node name="Area2D9" type="Area2D" parent="real"]
+position = Vector2(952, 144)
+script = ExtResource("1_0iipq")
+
+[node name="Sprite2D" type="Sprite2D" parent="real/Area2D9"]
+material = ExtResource("2_k8ksi")
+texture = ExtResource("5_0jbuj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="real/Area2D9"]
+shape = SubResource("CapsuleShape2D_dpuf3")
+
+[node name="CPUParticles2D" parent="real/Area2D9" instance=ExtResource("7_0j3tj")]
+
+[node name="Area2D10" type="Area2D" parent="real"]
+position = Vector2(1048, 96)
+rotation = 0.145916
+script = ExtResource("1_0iipq")
+
+[node name="Sprite2D" type="Sprite2D" parent="real/Area2D10"]
+material = ExtResource("2_k8ksi")
+texture = ExtResource("3_0jbuj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="real/Area2D10"]
+shape = SubResource("CapsuleShape2D_d78qb")
+
+[node name="CPUParticles2D" parent="real/Area2D10" instance=ExtResource("7_0j3tj")]
+
+[node name="Area2D11" type="Area2D" parent="real"]
+position = Vector2(1080, 264)
+rotation = -0.138152
+script = ExtResource("1_0iipq")
+
+[node name="Sprite2D" type="Sprite2D" parent="real/Area2D11"]
+material = ExtResource("2_k8ksi")
+texture = ExtResource("4_k8ksi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="real/Area2D11"]
+shape = SubResource("RectangleShape2D_k8ksi")
+
+[node name="CPUParticles2D" parent="real/Area2D11" instance=ExtResource("7_0j3tj")]
+
+[node name="Area2D12" type="Area2D" parent="real"]
+position = Vector2(1360, 264)
+rotation = 0.145916
+script = ExtResource("1_0iipq")
+
+[node name="Sprite2D" type="Sprite2D" parent="real/Area2D12"]
+material = ExtResource("2_k8ksi")
+texture = ExtResource("5_0jbuj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="real/Area2D12"]
+shape = SubResource("CapsuleShape2D_dpuf3")
+
+[node name="CPUParticles2D" parent="real/Area2D12" instance=ExtResource("7_0j3tj")]
+
+[node name="Area2D13" type="Area2D" parent="real"]
+position = Vector2(440, 728)
+rotation = 0.579755
+script = ExtResource("1_0iipq")
+
+[node name="Sprite2D" type="Sprite2D" parent="real/Area2D13"]
+material = ExtResource("2_k8ksi")
+texture = ExtResource("3_0jbuj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="real/Area2D13"]
+shape = SubResource("CapsuleShape2D_d78qb")
+
+[node name="CPUParticles2D" parent="real/Area2D13" instance=ExtResource("7_0j3tj")]
+position = Vector2(-802.222, -421.921)
+rotation = -0.579755
+
+[node name="Area2D14" type="Area2D" parent="real"]
+position = Vector2(696, 760)
+rotation = 0.117785
+script = ExtResource("1_0iipq")
+
+[node name="Sprite2D" type="Sprite2D" parent="real/Area2D14"]
+material = ExtResource("2_k8ksi")
+texture = ExtResource("4_k8ksi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="real/Area2D14"]
+shape = SubResource("RectangleShape2D_k8ksi")
+
+[node name="CPUParticles2D" parent="real/Area2D14" instance=ExtResource("7_0j3tj")]
+
+[node name="Area2D15" type="Area2D" parent="real"]
+position = Vector2(976, 760)
+rotation = 0.401852
+script = ExtResource("1_0iipq")
+
+[node name="Sprite2D" type="Sprite2D" parent="real/Area2D15"]
+material = ExtResource("2_k8ksi")
+texture = ExtResource("5_0jbuj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="real/Area2D15"]
+shape = SubResource("CapsuleShape2D_dpuf3")
+
+[node name="CPUParticles2D" parent="real/Area2D15" instance=ExtResource("7_0j3tj")]
+
+[node name="Area2D16" type="Area2D" parent="real"]
+position = Vector2(848, 848)
+rotation = 0.441603
+script = ExtResource("1_0iipq")
+
+[node name="Sprite2D" type="Sprite2D" parent="real/Area2D16"]
+material = ExtResource("2_k8ksi")
+texture = ExtResource("3_0jbuj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="real/Area2D16"]
+shape = SubResource("CapsuleShape2D_d78qb")
+
+[node name="CPUParticles2D" parent="real/Area2D16" instance=ExtResource("7_0j3tj")]
+
+[node name="Area2D17" type="Area2D" parent="real"]
+position = Vector2(1096, 824)
+rotation = 0.344603
+script = ExtResource("1_0iipq")
+
+[node name="Sprite2D" type="Sprite2D" parent="real/Area2D17"]
+material = ExtResource("2_k8ksi")
+texture = ExtResource("4_k8ksi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="real/Area2D17"]
+shape = SubResource("RectangleShape2D_k8ksi")
+
+[node name="CPUParticles2D" parent="real/Area2D17" instance=ExtResource("7_0j3tj")]
+
+[node name="Area2D18" type="Area2D" parent="real"]
+position = Vector2(1256, 712)
+rotation = 0.263701
+script = ExtResource("1_0iipq")
+
+[node name="Sprite2D" type="Sprite2D" parent="real/Area2D18"]
+material = ExtResource("2_k8ksi")
+texture = ExtResource("5_0jbuj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="real/Area2D18"]
+shape = SubResource("CapsuleShape2D_dpuf3")
+
+[node name="CPUParticles2D" parent="real/Area2D18" instance=ExtResource("7_0j3tj")]
+
+[node name="Area2D19" type="Area2D" parent="real"]
+position = Vector2(304, 424)
+rotation = -0.0601177
+script = ExtResource("1_0iipq")
+
+[node name="Sprite2D" type="Sprite2D" parent="real/Area2D19"]
+material = ExtResource("2_k8ksi")
+texture = ExtResource("3_0jbuj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="real/Area2D19"]
+shape = SubResource("CapsuleShape2D_d78qb")
+
+[node name="CPUParticles2D" parent="real/Area2D19" instance=ExtResource("7_0j3tj")]
+
+[node name="Area2D20" type="Area2D" parent="real"]
+position = Vector2(464, 496)
+rotation = 0.401852
+script = ExtResource("1_0iipq")
+
+[node name="Sprite2D" type="Sprite2D" parent="real/Area2D20"]
+material = ExtResource("2_k8ksi")
+texture = ExtResource("4_k8ksi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="real/Area2D20"]
+shape = SubResource("RectangleShape2D_k8ksi")
+
+[node name="CPUParticles2D" parent="real/Area2D20" instance=ExtResource("7_0j3tj")]
+
+[node name="Area2D21" type="Area2D" parent="real"]
+position = Vector2(744, 496)
+rotation = -0.15731
+script = ExtResource("1_0iipq")
+
+[node name="Sprite2D" type="Sprite2D" parent="real/Area2D21"]
+material = ExtResource("2_k8ksi")
+texture = ExtResource("5_0jbuj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="real/Area2D21"]
+shape = SubResource("CapsuleShape2D_dpuf3")
+
+[node name="CPUParticles2D" parent="real/Area2D21" instance=ExtResource("7_0j3tj")]
+
+[node name="Area2D22" type="Area2D" parent="real"]
+position = Vector2(840, 448)
+rotation = 0.725671
+script = ExtResource("1_0iipq")
+
+[node name="Sprite2D" type="Sprite2D" parent="real/Area2D22"]
+material = ExtResource("2_k8ksi")
+texture = ExtResource("3_0jbuj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="real/Area2D22"]
+shape = SubResource("CapsuleShape2D_d78qb")
+
+[node name="CPUParticles2D" parent="real/Area2D22" instance=ExtResource("7_0j3tj")]
+
+[node name="Area2D23" type="Area2D" parent="real"]
+position = Vector2(872, 616)
+rotation = 0.441603
+script = ExtResource("1_0iipq")
+
+[node name="Sprite2D" type="Sprite2D" parent="real/Area2D23"]
+material = ExtResource("2_k8ksi")
+texture = ExtResource("4_k8ksi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="real/Area2D23"]
+shape = SubResource("RectangleShape2D_k8ksi")
+
+[node name="CPUParticles2D" parent="real/Area2D23" instance=ExtResource("7_0j3tj")]
+
+[node name="Area2D24" type="Area2D" parent="real"]
+position = Vector2(1152, 616)
+rotation = 0.725671
+script = ExtResource("1_0iipq")
+
+[node name="Sprite2D" type="Sprite2D" parent="real/Area2D24"]
+material = ExtResource("2_k8ksi")
+texture = ExtResource("5_0jbuj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="real/Area2D24"]
+shape = SubResource("CapsuleShape2D_dpuf3")
+
+[node name="CPUParticles2D" parent="real/Area2D24" instance=ExtResource("7_0j3tj")]
+
+[node name="Area2D27" type="Area2D" parent="real"]
+position = Vector2(632, 576)
+rotation = 0.725671
+script = ExtResource("1_0iipq")
+
+[node name="Sprite2D" type="Sprite2D" parent="real/Area2D27"]
+material = ExtResource("2_k8ksi")
+texture = ExtResource("5_0jbuj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="real/Area2D27"]
+shape = SubResource("CapsuleShape2D_dpuf3")
+
+[node name="CPUParticles2D" parent="real/Area2D27" instance=ExtResource("7_0j3tj")]

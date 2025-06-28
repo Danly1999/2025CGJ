@@ -1,12 +1,12 @@
 shader_type canvas_item;
-uniform float _Outline = 1.;
+uniform float Outline = 1.;
 void vertex() {
 	// Called for every vertex the material is visible on.
 }
 
 void fragment() {
 	vec4 tex = texture(TEXTURE,UV).rgba;
-	COLOR = vec4(mix(vec3(0.),tex.rgb,tex.a),texture(TEXTURE,(UV-0.5)*_Outline+0.5).a+tex.a);
+	COLOR = vec4(mix(vec3(1.),tex.rgb,tex.a),texture(TEXTURE,(UV-0.5)*Outline+0.5).a+tex.a*2.);
 }
 
 //void light() {

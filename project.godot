@@ -22,15 +22,21 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 [dialogic]
 
 directories/dch_directory={
+"car": "res://Dia/character/car.dch",
 "character": "res://Dia/character/character.dch",
+"leibi": "res://Dia/character/leibi.dch",
 "long": "res://Dia/character/long.dch",
 "unit_test_character": "res://Tests/Resources/unit_test_character.dch"
 }
 directories/dtl_directory={
 "RiseLong": "res://Dia/RiseLong.dtl",
 "carover": "res://Dia/carover.dtl",
+"carstar": "res://Dia/carstar.dtl",
 "timeline": "res://Dia/timeline.dtl",
-"小龙虾": "res://Dia/小龙虾.dtl"
+"xueover": "res://Dia/xueover.dtl",
+"小龙虾": "res://Dia/小龙虾.dtl",
+"过度": "res://Dia/过度.dtl",
+"雪碧": "res://Dia/雪碧.dtl"
 }
 layout/style_list=["res://Dia/character/new.tres"]
 layout/default_style="res://Dia/character/new.tres"

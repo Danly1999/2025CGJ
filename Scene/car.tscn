@@ -1,0 +1,37 @@
+[gd_scene load_steps=7 format=3 uid="uid://bvtam3nyvfjo8"]
+
+[ext_resource type="Script" uid="uid://b31t6t6ifjlfy" path="res://Scripts/dia.gd" id="1_hbetw"]
+[ext_resource type="Script" uid="uid://y0ieq5krk2vv" path="res://Scripts/CheckSprite.cs" id="1_kkigb"]
+[ext_resource type="Material" uid="uid://p64bbolsj4l8" path="res://Materials/base.material" id="2_hbetw"]
+[ext_resource type="Texture2D" uid="uid://bxrrqx8u6wkls" path="res://Texture/car/base.png" id="3_mmd8j"]
+[ext_resource type="Texture2D" uid="uid://b1slqbea0qmfx" path="res://Texture/car/micar.png" id="4_ynucw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_twm2h"]
+size = Vector2(496, 304)
+
+[node name="car" type="Node2D"]
+visibility_layer = 2
+script = ExtResource("1_hbetw")
+dialogic_timeline = "carstar"
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(1024, 472)
+script = ExtResource("1_kkigb")
+dia_name = "carover"
+next_scene_path = "res://Scene/过度.tscn"
+type = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+material = ExtResource("2_hbetw")
+texture = ExtResource("3_mmd8j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_twm2h")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(440, 424)
+texture = ExtResource("4_ynucw")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(1624, 424)
+texture = ExtResource("4_ynucw")
