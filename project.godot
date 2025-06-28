@@ -25,6 +25,7 @@ directories/dch_directory={
 "car": "res://Dia/character/car.dch",
 "character": "res://Dia/character/character.dch",
 "leibi": "res://Dia/character/leibi.dch",
+"leng": "res://Dia/character/leng.dch",
 "long": "res://Dia/character/long.dch",
 "unit_test_character": "res://Tests/Resources/unit_test_character.dch"
 }
@@ -34,6 +35,8 @@ directories/dtl_directory={
 "carstar": "res://Dia/carstar.dtl",
 "timeline": "res://Dia/timeline.dtl",
 "xueover": "res://Dia/xueover.dtl",
+"冷屋enter": "res://Dia/冷屋enter.dtl",
+"冷屋over": "res://Dia/冷屋over.dtl",
 "小龙虾": "res://Dia/小龙虾.dtl",
 "过度": "res://Dia/过度.dtl",
 "雪碧": "res://Dia/雪碧.dtl"

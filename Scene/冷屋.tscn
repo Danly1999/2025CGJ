@@ -1,0 +1,1026 @@
+[gd_scene load_steps=9 format=3 uid="uid://c0xpq3i0aj1kq"]
+
+[ext_resource type="Script" uid="uid://b31t6t6ifjlfy" path="res://Scripts/dia.gd" id="1_epgf1"]
+[ext_resource type="Script" uid="uid://bmwlgi4o27y3w" path="res://Scripts/CheckSimple.cs" id="1_hhf1f"]
+[ext_resource type="Script" uid="uid://y0ieq5krk2vv" path="res://Scripts/CheckSprite.cs" id="1_sqcmn"]
+[ext_resource type="Texture2D" uid="uid://4ngpswmbyuvp" path="res://Texture/lw/leng.png" id="1_ykf8a"]
+[ext_resource type="Material" uid="uid://p64bbolsj4l8" path="res://Materials/base.material" id="2_ykf8a"]
+[ext_resource type="Texture2D" uid="uid://bhhnm1oca8y3i" path="res://Texture/lw/liang.png" id="3_sqcmn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sqcmn"]
+size = Vector2(112, 240)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_epgf1"]
+size = Vector2(112, 240)
+
+[node name="冷屋" type="Node2D"]
+script = ExtResource("1_epgf1")
+dialogic_timeline = "冷屋enter"
+
+[node name="Area2D" type="Area2D" parent="."]
+z_index = 1
+position = Vector2(96, 864)
+script = ExtResource("1_sqcmn")
+dia_name = "冷屋over"
+type = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("1_ykf8a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_sqcmn")
+
+[node name="lengs" type="Node2D" parent="."]
+
+[node name="Area2D" type="Area2D" parent="lengs"]
+position = Vector2(80, 152)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D2" type="Area2D" parent="lengs"]
+position = Vector2(224, 152)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D2"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D2"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D3" type="Area2D" parent="lengs"]
+position = Vector2(368, 152)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D3"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D3"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D4" type="Area2D" parent="lengs"]
+position = Vector2(512, 152)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D4"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D4"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D5" type="Area2D" parent="lengs"]
+position = Vector2(672, 152)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D5"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D5"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D6" type="Area2D" parent="lengs"]
+position = Vector2(816, 152)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D6"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D6"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D7" type="Area2D" parent="lengs"]
+position = Vector2(960, 152)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D7"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D7"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D8" type="Area2D" parent="lengs"]
+position = Vector2(1104, 152)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D8"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D8"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D9" type="Area2D" parent="lengs"]
+position = Vector2(1248, 152)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D9"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D9"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D10" type="Area2D" parent="lengs"]
+position = Vector2(1392, 152)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D10"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D10"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D11" type="Area2D" parent="lengs"]
+position = Vector2(1536, 152)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D11"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D11"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D12" type="Area2D" parent="lengs"]
+position = Vector2(1680, 152)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D12"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D12"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D13" type="Area2D" parent="lengs"]
+position = Vector2(1840, 152)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D13"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D13"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D14" type="Area2D" parent="lengs"]
+position = Vector2(96, 296)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D14"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D14"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D15" type="Area2D" parent="lengs"]
+position = Vector2(224, 296)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D15"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D15"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D16" type="Area2D" parent="lengs"]
+position = Vector2(384, 296)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D16"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D16"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D17" type="Area2D" parent="lengs"]
+position = Vector2(528, 296)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D17"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D17"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D18" type="Area2D" parent="lengs"]
+position = Vector2(688, 296)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D18"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D18"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D19" type="Area2D" parent="lengs"]
+position = Vector2(832, 296)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D19"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D19"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D20" type="Area2D" parent="lengs"]
+position = Vector2(976, 296)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D20"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D20"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D21" type="Area2D" parent="lengs"]
+position = Vector2(1120, 296)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D21"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D21"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D22" type="Area2D" parent="lengs"]
+position = Vector2(1264, 296)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D22"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D22"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D23" type="Area2D" parent="lengs"]
+position = Vector2(1408, 296)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D23"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D23"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D24" type="Area2D" parent="lengs"]
+position = Vector2(1552, 296)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D24"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D24"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D25" type="Area2D" parent="lengs"]
+position = Vector2(1680, 296)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D25"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D25"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D26" type="Area2D" parent="lengs"]
+position = Vector2(1856, 296)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D26"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D26"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D27" type="Area2D" parent="lengs"]
+position = Vector2(80, 432)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D27"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D27"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D28" type="Area2D" parent="lengs"]
+position = Vector2(224, 432)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D28"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D28"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D29" type="Area2D" parent="lengs"]
+position = Vector2(368, 432)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D29"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D29"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D30" type="Area2D" parent="lengs"]
+position = Vector2(512, 432)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D30"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D30"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D31" type="Area2D" parent="lengs"]
+position = Vector2(672, 432)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D31"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D31"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D32" type="Area2D" parent="lengs"]
+position = Vector2(816, 432)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D32"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D32"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D33" type="Area2D" parent="lengs"]
+position = Vector2(960, 432)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D33"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D33"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D34" type="Area2D" parent="lengs"]
+position = Vector2(1104, 432)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D34"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D34"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D35" type="Area2D" parent="lengs"]
+position = Vector2(1248, 432)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D35"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D35"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D36" type="Area2D" parent="lengs"]
+position = Vector2(1392, 432)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D36"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D36"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D37" type="Area2D" parent="lengs"]
+position = Vector2(1536, 432)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D37"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D37"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D38" type="Area2D" parent="lengs"]
+position = Vector2(1680, 432)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D38"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D38"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D39" type="Area2D" parent="lengs"]
+position = Vector2(1840, 432)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D39"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D39"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D40" type="Area2D" parent="lengs"]
+position = Vector2(96, 576)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D40"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D40"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D41" type="Area2D" parent="lengs"]
+position = Vector2(240, 576)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D41"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D41"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D42" type="Area2D" parent="lengs"]
+position = Vector2(384, 576)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D42"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D42"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D43" type="Area2D" parent="lengs"]
+position = Vector2(528, 576)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D43"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D43"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D44" type="Area2D" parent="lengs"]
+position = Vector2(688, 576)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D44"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D44"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D45" type="Area2D" parent="lengs"]
+position = Vector2(832, 576)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D45"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D45"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D46" type="Area2D" parent="lengs"]
+position = Vector2(976, 576)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D46"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D46"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D47" type="Area2D" parent="lengs"]
+position = Vector2(1120, 576)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D47"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D47"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D48" type="Area2D" parent="lengs"]
+position = Vector2(1264, 576)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D48"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D48"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D49" type="Area2D" parent="lengs"]
+position = Vector2(1408, 576)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D49"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D49"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D50" type="Area2D" parent="lengs"]
+position = Vector2(1552, 576)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D50"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D50"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D51" type="Area2D" parent="lengs"]
+position = Vector2(1696, 576)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D51"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D51"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D52" type="Area2D" parent="lengs"]
+position = Vector2(1856, 576)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D52"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D52"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D53" type="Area2D" parent="lengs"]
+position = Vector2(80, 720)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D53"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D53"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D54" type="Area2D" parent="lengs"]
+position = Vector2(224, 720)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D54"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D54"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D55" type="Area2D" parent="lengs"]
+position = Vector2(368, 720)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D55"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D55"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D56" type="Area2D" parent="lengs"]
+position = Vector2(512, 720)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D56"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D56"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D57" type="Area2D" parent="lengs"]
+position = Vector2(672, 720)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D57"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D57"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D58" type="Area2D" parent="lengs"]
+position = Vector2(816, 720)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D58"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D58"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D59" type="Area2D" parent="lengs"]
+position = Vector2(960, 720)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D59"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D59"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D60" type="Area2D" parent="lengs"]
+position = Vector2(1104, 720)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D60"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D60"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D61" type="Area2D" parent="lengs"]
+position = Vector2(1248, 720)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D61"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D61"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D62" type="Area2D" parent="lengs"]
+position = Vector2(1392, 720)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D62"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D62"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D63" type="Area2D" parent="lengs"]
+position = Vector2(1536, 720)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D63"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D63"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D64" type="Area2D" parent="lengs"]
+position = Vector2(1680, 720)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D64"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D64"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D65" type="Area2D" parent="lengs"]
+position = Vector2(1840, 720)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D65"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D65"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D66" type="Area2D" parent="lengs"]
+z_index = 1
+position = Vector2(672, 1008)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D66"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D66"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D67" type="Area2D" parent="lengs"]
+position = Vector2(248, 864)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D67"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D67"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D68" type="Area2D" parent="lengs"]
+position = Vector2(392, 864)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D68"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D68"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D69" type="Area2D" parent="lengs"]
+position = Vector2(536, 864)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D69"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D69"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D70" type="Area2D" parent="lengs"]
+position = Vector2(696, 864)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D70"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D70"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D71" type="Area2D" parent="lengs"]
+position = Vector2(840, 864)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D71"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D71"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D72" type="Area2D" parent="lengs"]
+position = Vector2(984, 864)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D72"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D72"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D73" type="Area2D" parent="lengs"]
+position = Vector2(1128, 864)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D73"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D73"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D74" type="Area2D" parent="lengs"]
+position = Vector2(1272, 864)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D74"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D74"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D75" type="Area2D" parent="lengs"]
+position = Vector2(1416, 864)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D75"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D75"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D76" type="Area2D" parent="lengs"]
+position = Vector2(1560, 864)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D76"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D76"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D77" type="Area2D" parent="lengs"]
+position = Vector2(1688, 864)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D77"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D77"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D78" type="Area2D" parent="lengs"]
+position = Vector2(1864, 864)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D78"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D78"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D79" type="Area2D" parent="lengs"]
+z_index = 1
+position = Vector2(80, 1008)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D79"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D79"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D80" type="Area2D" parent="lengs"]
+position = Vector2(224, 1008)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D80"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D80"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D81" type="Area2D" parent="lengs"]
+position = Vector2(368, 1008)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D81"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D81"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D82" type="Area2D" parent="lengs"]
+position = Vector2(512, 1008)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D82"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D82"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D84" type="Area2D" parent="lengs"]
+position = Vector2(816, 1008)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D84"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D84"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D85" type="Area2D" parent="lengs"]
+position = Vector2(960, 1008)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D85"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D85"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D86" type="Area2D" parent="lengs"]
+position = Vector2(1104, 1008)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D86"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D86"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D87" type="Area2D" parent="lengs"]
+position = Vector2(1248, 1008)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D87"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D87"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D88" type="Area2D" parent="lengs"]
+position = Vector2(1392, 1008)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D88"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D88"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D89" type="Area2D" parent="lengs"]
+position = Vector2(1536, 1008)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D89"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D89"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D90" type="Area2D" parent="lengs"]
+position = Vector2(1680, 1008)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D90"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D90"]
+shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="Area2D91" type="Area2D" parent="lengs"]
+position = Vector2(1840, 1008)
+script = ExtResource("1_hhf1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="lengs/Area2D91"]
+material = ExtResource("2_ykf8a")
+texture = ExtResource("3_sqcmn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D91"]
+shape = SubResource("RectangleShape2D_epgf1")

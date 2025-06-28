@@ -6,6 +6,7 @@ public enum CheckSpriteType
 	xia,
 	car,
 	bi,
+	leng,
 }
 
 public partial class CheckSprite : Area2D
