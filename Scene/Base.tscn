@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://dvxflogrejndx"]
+[gd_scene load_steps=7 format=3 uid="uid://dvxflogrejndx"]
 
 [ext_resource type="Texture2D" uid="uid://bc7onk71m3wuy" path="res://Texture/hachi.png" id="1_jiqry"]
 [ext_resource type="Texture2D" uid="uid://bud048y3id12w" path="res://Texture/hachi2.png" id="2_jtrc1"]
 [ext_resource type="Texture2D" uid="uid://xekvgydagppq" path="res://Texture/hachi3.png" id="3_tt5dw"]
+[ext_resource type="Texture2D" uid="uid://03wx32kmla78" path="res://Texture/tital.png" id="4_jiqry"]
 [ext_resource type="Script" uid="uid://b31t6t6ifjlfy" path="res://Scripts/dia.gd" id="8_tt5dw"]
 
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_jiqry"]
@@ -21,6 +22,7 @@ frame_3/duration = 0.1
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Control" type="Control" parent="CanvasLayer"]
+z_index = -1
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -43,6 +45,10 @@ texture = SubResource("AnimatedTexture_jiqry")
 
 [node name="Camera2D" type="Camera2D" parent="Node2D"]
 anchor_mode = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D"]
+position = Vector2(952, 536)
+texture = ExtResource("4_jiqry")
 
 [node name="Node2D" type="Node2D" parent="Node2D"]
 script = ExtResource("8_tt5dw")

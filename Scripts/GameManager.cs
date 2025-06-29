@@ -4,6 +4,7 @@ using System;
 public partial class GameManager
 {
     public GodotObject _dialogicBridge;
+    public bool canCheck = true;
     private static readonly object _lock = new object();
     private static GameManager _instance;
     

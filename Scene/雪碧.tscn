@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://brnbtb2r6t56d"]
+[gd_scene load_steps=15 format=3 uid="uid://brnbtb2r6t56d"]
 
 [ext_resource type="Script" uid="uid://bmwlgi4o27y3w" path="res://Scripts/CheckSimple.cs" id="1_0iipq"]
 [ext_resource type="Script" uid="uid://b31t6t6ifjlfy" path="res://Scripts/dia.gd" id="1_ssibj"]
@@ -10,6 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://d4gobsfdpapp7" path="res://Texture/xuebi/xuebi03.png" id="5_0jbuj"]
 [ext_resource type="Script" uid="uid://cbrt0f8dwf7o0" path="res://Scripts/Real.cs" id="5_rb3df"]
 [ext_resource type="PackedScene" uid="uid://bxcmrj4kh1nt0" path="res://Scene/cpu_particles_2d.tscn" id="7_0j3tj"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_rb3df"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_d78qb"]
 radius = 40.0
@@ -26,6 +28,12 @@ height = 240.0
 script = ExtResource("1_ssibj")
 dialogic_timeline = "雪碧"
 next_scene_path = "uid://fsbhb5p44doy"
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+modulate = Color(0.463829, 0.428835, 0.346123, 0.5)
+position = Vector2(952, 536)
+scale = Vector2(2000, 1100)
+texture = SubResource("CanvasTexture_rb3df")
 
 [node name="leibi" type="Area2D" parent="."]
 position = Vector2(568, 480)

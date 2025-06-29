@@ -1,10 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://bvtam3nyvfjo8"]
+[gd_scene load_steps=8 format=3 uid="uid://bvtam3nyvfjo8"]
 
 [ext_resource type="Script" uid="uid://b31t6t6ifjlfy" path="res://Scripts/dia.gd" id="1_hbetw"]
 [ext_resource type="Script" uid="uid://y0ieq5krk2vv" path="res://Scripts/CheckSprite.cs" id="1_kkigb"]
 [ext_resource type="Material" uid="uid://p64bbolsj4l8" path="res://Materials/base.material" id="2_hbetw"]
 [ext_resource type="Texture2D" uid="uid://bxrrqx8u6wkls" path="res://Texture/car/base.png" id="3_mmd8j"]
 [ext_resource type="Texture2D" uid="uid://b1slqbea0qmfx" path="res://Texture/car/micar.png" id="4_ynucw"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_hbetw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_twm2h"]
 size = Vector2(496, 304)
@@ -13,6 +15,12 @@ size = Vector2(496, 304)
 visibility_layer = 2
 script = ExtResource("1_hbetw")
 dialogic_timeline = "carstar"
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+modulate = Color(0.463829, 0.428835, 0.346123, 0.5)
+position = Vector2(952, 536)
+scale = Vector2(2000, 1100)
+texture = SubResource("CanvasTexture_hbetw")
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(1024, 472)

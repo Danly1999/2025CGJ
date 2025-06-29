@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://2yov8u2xd6k3"]
+
+[ext_resource type="Script" uid="uid://c1d2nybqrvbpr" path="res://Scripts/over.gd" id="1_r0o24"]
+[ext_resource type="Texture2D" uid="uid://ctmgodqb1decy" path="res://Texture/wan.png" id="2_orsfc"]
+
+[node name="结束" type="Node2D"]
+script = ExtResource("1_r0o24")
+dialogic_timeline = "旁白"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1512, 816)
+texture = ExtResource("2_orsfc")

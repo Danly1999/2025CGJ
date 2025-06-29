@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://c0xpq3i0aj1kq"]
+[gd_scene load_steps=14 format=3 uid="uid://c0xpq3i0aj1kq"]
 
 [ext_resource type="Script" uid="uid://b31t6t6ifjlfy" path="res://Scripts/dia.gd" id="1_epgf1"]
 [ext_resource type="Script" uid="uid://bmwlgi4o27y3w" path="res://Scripts/CheckSimple.cs" id="1_hhf1f"]
@@ -6,6 +6,11 @@
 [ext_resource type="Texture2D" uid="uid://4ngpswmbyuvp" path="res://Texture/lw/leng.png" id="1_ykf8a"]
 [ext_resource type="Material" uid="uid://p64bbolsj4l8" path="res://Materials/base.material" id="2_ykf8a"]
 [ext_resource type="Texture2D" uid="uid://bhhnm1oca8y3i" path="res://Texture/lw/liang.png" id="3_sqcmn"]
+[ext_resource type="Texture2D" uid="uid://cton4l0aqqrb5" path="res://Texture/cat/01.png" id="7_b6v2o"]
+[ext_resource type="Texture2D" uid="uid://b3v5wq238ai8q" path="res://Texture/cat/02.png" id="8_13ox7"]
+[ext_resource type="Texture2D" uid="uid://bb7rbkiwcfhml" path="res://Texture/cat/03.png" id="9_ej1qm"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_b6v2o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sqcmn"]
 size = Vector2(112, 240)
@@ -13,15 +18,33 @@ size = Vector2(112, 240)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_epgf1"]
 size = Vector2(112, 240)
 
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_dk584"]
+frames = 4
+speed_scale = 6.0
+frame_0/texture = ExtResource("7_b6v2o")
+frame_1/texture = ExtResource("8_13ox7")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("7_b6v2o")
+frame_2/duration = 1.0
+frame_3/texture = ExtResource("9_ej1qm")
+frame_3/duration = 1.0
+
 [node name="冷屋" type="Node2D"]
 script = ExtResource("1_epgf1")
 dialogic_timeline = "冷屋enter"
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+modulate = Color(0.463829, 0.428835, 0.346123, 0.5)
+position = Vector2(952, 536)
+scale = Vector2(2000, 1100)
+texture = SubResource("CanvasTexture_b6v2o")
 
 [node name="Area2D" type="Area2D" parent="."]
 z_index = 1
 position = Vector2(1696, 864)
 script = ExtResource("1_sqcmn")
 dia_name = "冷屋over"
+next_scene_path = "res://Scene/unity.tscn"
 type = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D"]
@@ -1027,3 +1050,8 @@ texture = ExtResource("3_sqcmn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="lengs/Area2D91"]
 shape = SubResource("RectangleShape2D_epgf1")
+
+[node name="cat" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(960, 432)
+texture = SubResource("AnimatedTexture_dk584")

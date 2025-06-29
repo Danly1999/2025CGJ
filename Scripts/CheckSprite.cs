@@ -19,8 +19,15 @@ public partial class CheckSprite : Area2D
 	public string next_scene_path = "res://Scene/小龙虾.tscn";
 	[Export]
 	public CheckSpriteType type = CheckSpriteType.xia;
+	public async void CheckWait()
+	{
+		GameManager.Instance.canCheck = false;
+		await ToSignal(GetTree().CreateTimer(2f), "timeout");
+		GameManager.Instance.canCheck = true;
+	}
 	public override void _Ready()
 	{
+		CheckWait();
 		// 连接Area2D的鼠标事件信号
 		MouseEntered += OnMouseEntered;
 		MouseExited += OnMouseExited;
@@ -64,6 +71,7 @@ public partial class CheckSprite : Area2D
 	// 输入事件处理（包括点击）
 	private void OnInputEvent(Node viewport, InputEvent @event, long shapeIdx)
 	{
+		if(!GameManager.Instance.canCheck) return;
 		if (@event is InputEventMouseButton mouseEvent)
 		{
 			if (mouseEvent.ButtonIndex == MouseButton.Left && mouseEvent.Pressed)
@@ -92,6 +100,10 @@ public partial class CheckSprite : Area2D
 					case CheckSpriteType.bi:
 						GetNode<Real>("../real").over = true;
 						break;
+					case CheckSpriteType.leng:
+						GetNode<CanvasItem>("../lengs").Visible = false;
+						GetNode<CanvasItem>("../cat").Visible = true;
+						break;
 				}
 					GameManager.Instance._dialogicBridge.Call("start_timeline", dia_name);
 					GameManager.Instance._dialogicBridge.Call("connect_signal", this, nameof(DelayedFree));
@@ -115,7 +127,7 @@ public partial class CheckSprite : Area2D
 			GD.Print("父节点无效");
 			return;
 		}
-		
+
 		parent.AddChild(scene.Instantiate());
 		GetParent<Node2D>().QueueFree();
 	}

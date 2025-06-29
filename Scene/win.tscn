@@ -1,0 +1,225 @@
+[gd_scene load_steps=11 format=3 uid="uid://cbs0lxkitcg1q"]
+
+[ext_resource type="Texture2D" uid="uid://7miniidqgo1f" path="res://Texture/icon/165538-gua_fu_1102-chuang_kou_11-windows10-wei_ruan_gong_si-microsoft_windows-3840x2160.jpg" id="1_uw1tq"]
+[ext_resource type="Texture2D" uid="uid://dnhpqah47v4qy" path="res://Texture/icon/UnrealEditor.png" id="2_kgfqc"]
+[ext_resource type="Script" uid="uid://bgunwtidchyvo" path="res://IconDrag.cs" id="3_ibe3g"]
+[ext_resource type="Texture2D" uid="uid://bbnixvcv6a0kg" path="res://Texture/icon/icons8-bin-windows-240.png" id="4_ibe3g"]
+[ext_resource type="Texture2D" uid="uid://o0a0cthqaqh4" path="res://Texture/icon/Godot_v4.4.1-stable_mono_win64.png" id="5_tpsj8"]
+[ext_resource type="Texture2D" uid="uid://c5m80gvdw7qpo" path="res://Texture/icon/TuanjieHubSetup.png" id="6_rlqmq"]
+[ext_resource type="Texture2D" uid="uid://co6hal7ufgpbr" path="res://Texture/icon/cocos.png" id="7_2h17t"]
+[ext_resource type="Texture2D" uid="uid://b5pqe3j74yyln" path="res://Texture/icon/RPGMaker.png" id="8_jjt15"]
+[ext_resource type="Texture2D" uid="uid://1s22dgpldhvy" path="res://Texture/icon/UnrealEditor (backup).png" id="9_n2et5"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ygu2s"]
+outline_size = 2
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 4
+shadow_color = Color(0, 0, 0, 0.392157)
+shadow_offset = Vector2(2, 2)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+z_index = -1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1024.0
+offset_top = -576.0
+offset_right = 1024.0
+offset_bottom = 576.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_uw1tq")
+
+[node name="垃圾桶" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 1728.0
+offset_top = 64.0
+offset_right = 1792.0
+offset_bottom = 128.0
+texture = ExtResource("4_ibe3g")
+script = ExtResource("3_ibe3g")
+
+[node name="Label" type="Label" parent="垃圾桶"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -47.5
+offset_top = 6.0
+offset_right = 47.5
+offset_bottom = 29.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "垃圾桶"
+label_settings = SubResource("LabelSettings_ygu2s")
+horizontal_alignment = 1
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 56.0
+offset_right = 129.0
+offset_bottom = 120.0
+texture = ExtResource("2_kgfqc")
+script = ExtResource("3_ibe3g")
+
+[node name="Label" type="Label" parent="TextureRect2"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -47.5
+offset_top = 6.0
+offset_right = 47.5
+offset_bottom = 29.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "GameMaker"
+label_settings = SubResource("LabelSettings_ygu2s")
+horizontal_alignment = 1
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 176.0
+offset_right = 129.0
+offset_bottom = 240.0
+texture = ExtResource("5_tpsj8")
+script = ExtResource("3_ibe3g")
+
+[node name="Label" type="Label" parent="TextureRect3"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -47.5
+offset_top = 6.0
+offset_right = 47.5
+offset_bottom = 29.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Godot"
+label_settings = SubResource("LabelSettings_ygu2s")
+horizontal_alignment = 1
+
+[node name="TextureRect4" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 296.0
+offset_right = 129.0
+offset_bottom = 360.0
+texture = ExtResource("6_rlqmq")
+script = ExtResource("3_ibe3g")
+canDelete = true
+
+[node name="Label" type="Label" parent="TextureRect4"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -47.5
+offset_top = 6.0
+offset_right = 47.5
+offset_bottom = 29.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Unity"
+label_settings = SubResource("LabelSettings_ygu2s")
+horizontal_alignment = 1
+
+[node name="TextureRect5" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 257.0
+offset_top = 296.0
+offset_right = 315.0
+offset_bottom = 360.0
+texture = ExtResource("7_2h17t")
+script = ExtResource("3_ibe3g")
+
+[node name="Label" type="Label" parent="TextureRect5"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -47.5
+offset_top = 6.0
+offset_right = 47.5
+offset_bottom = 29.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Cocos"
+label_settings = SubResource("LabelSettings_ygu2s")
+horizontal_alignment = 1
+
+[node name="TextureRect6" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 176.0
+offset_right = 320.0
+offset_bottom = 240.0
+texture = ExtResource("8_jjt15")
+script = ExtResource("3_ibe3g")
+
+[node name="Label" type="Label" parent="TextureRect6"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -47.5
+offset_top = 6.0
+offset_right = 47.5
+offset_bottom = 29.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "RPGMaker"
+label_settings = SubResource("LabelSettings_ygu2s")
+horizontal_alignment = 1
+
+[node name="TextureRect7" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 257.0
+offset_top = 56.0
+offset_right = 321.0
+offset_bottom = 120.0
+texture = ExtResource("9_n2et5")
+script = ExtResource("3_ibe3g")
+
+[node name="Label" type="Label" parent="TextureRect7"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -47.5
+offset_top = 6.0
+offset_right = 47.5
+offset_bottom = 29.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Unreal"
+label_settings = SubResource("LabelSettings_ygu2s")
+horizontal_alignment = 1

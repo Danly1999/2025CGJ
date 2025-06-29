@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://csrjbxwlcf0o5"]
+
+[ext_resource type="Script" uid="uid://dyjbb2k1nec6b" path="res://Scripts/LoadUnity.cs" id="2_7htlf"]
+[ext_resource type="Script" uid="uid://b31t6t6ifjlfy" path="res://Scripts/dia.gd" id="2_o2jc2"]
+
+[node name="unity" type="Node2D"]
+script = ExtResource("2_o2jc2")
+dialogic_timeline = "unity"
+
+[node name="Node2D" type="Node2D" parent="."]
+script = ExtResource("2_7htlf")

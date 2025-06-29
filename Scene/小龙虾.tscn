@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://fsbhb5p44doy"]
+[gd_scene load_steps=9 format=3 uid="uid://fsbhb5p44doy"]
 
 [ext_resource type="Script" uid="uid://b31t6t6ifjlfy" path="res://Scripts/dia.gd" id="1_62vs7"]
 [ext_resource type="Script" uid="uid://y0ieq5krk2vv" path="res://Scripts/CheckSprite.cs" id="1_mnay5"]
@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://dc4owel4cyl1j" path="res://Texture/小龙虾.png" id="4_wxche"]
 [ext_resource type="Script" uid="uid://ctqxl18jackw1" path="res://Scripts/Dmove.cs" id="5_ev87h"]
 
+[sub_resource type="CanvasTexture" id="CanvasTexture_ev87h"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rfcsk"]
 size = Vector2(192, 224)
 
@@ -14,6 +16,12 @@ size = Vector2(192, 224)
 script = ExtResource("1_62vs7")
 dialogic_timeline = "小龙虾"
 next_scene_path = "uid://fsbhb5p44doy"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.294402, 0.473632, 0.422877, 0.5)
+position = Vector2(952, 536)
+scale = Vector2(2000, 1100)
+texture = SubResource("CanvasTexture_ev87h")
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(736, 432)
